@@ -58,7 +58,7 @@ class TodoistSkill1(MycroftSkill):
 	api.commit()
         self.speak("movie added to to list")
 		
-	def stop(self):
+    def stop(self):
         pass
 
 def create_skill():
