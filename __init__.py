@@ -27,7 +27,7 @@ class TodoistSkill1(MycroftSkill):
     def __init__(self):
         super(TodoistSkill1, self).__init__(name="TodoistSkill1")
 		
-	def initialize(self):
+    def initialize(self):
         task_intent = IntentBuilder("TaskIntent").\
             require("TaskKeyword").build()
         self.register_intent(task_intent, self.handle_task_intent)
@@ -41,21 +41,21 @@ class TodoistSkill1(MycroftSkill):
         self.register_intent(movie_intent, self.handle_movie_intent)
 		
     def handle_task_intent(self, message):
-		api.sync()
-		taks1 = api.items.add('Task1', 151939895)
-		api.commit()
+	api.sync()
+	taks1 = api.items.add('Task1', 151939895)
+	api.commit()
         self.speak("task added to to do list")
 
     def handle_shopping_intent(self, message):
-		api.sync()
-		taks1 = api.items.add('Task1', 151939896)
-		api.commit()
+	api.sync()
+	taks1 = api.items.add('Task1', 151939896)
+	api.commit()
         self.speak("item added to shopping list")
 
     def handle_movie_intent(self, message):
-		api.sync()
-		taks1 = api.items.add('Task1', 151939899)
-		api.commit()
+	api.sync()
+	taks1 = api.items.add('Task1', 151939899)
+	api.commit()
         self.speak("movie added to to list")
 		
 	def stop(self):
